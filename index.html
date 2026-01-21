@@ -4,38 +4,39 @@
   <meta charset="UTF-8">
   <title>Sổ tay online</title>
 
-  <!-- pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-  <!-- StPageFlip -->
   <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      background: #f2f2f2;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #e5e5e5;
+    }
+
+    #book-wrapper {
+      width: 100vw;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
 
     #book {
-      width: 600px;
-      height: 800px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 768px) {
-      #book {
-        width: 90vw;
-        height: 90vh;
-      }
+      width: 100%;
+      height: 100%;
+      max-width: 1200px;
+      max-height: 90vh;
     }
   </style>
 </head>
 <body>
-  <div id="book"></div>
+  <div id="book-wrapper">
+    <div id="book"></div>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>

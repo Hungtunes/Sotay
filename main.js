@@ -6,13 +6,9 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
 const container = document.getElementById("book");
 
 const pageFlip = new St.PageFlip(container, {
-  width: 600,
-  height: 800,
   size: "stretch",
-  minWidth: 300,
-  maxWidth: 1000,
-  minHeight: 400,
-  maxHeight: 1200,
+  width: container.clientWidth,
+  height: container.clientHeight,
   showCover: true,
   mobileScrollSupport: true
 });
